@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="YugensysDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_pair">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="color" Type="varchar" MaxLength="20" />
+    <Property Name="fruit" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tbl_suggested">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fruit" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <Function Name="suggested_sp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="color" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="YugensysDBModelStoreContainer">
+    <EntitySet Name="tbl_pair" EntityType="Self.tbl_pair" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_suggested" EntityType="Self.tbl_suggested" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

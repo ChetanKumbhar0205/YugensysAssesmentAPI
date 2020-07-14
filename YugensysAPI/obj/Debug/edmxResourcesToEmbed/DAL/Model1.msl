@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="YugensysDBModelStoreContainer" CdmEntityContainer="YugensysDBEntities">
+    <EntitySetMapping Name="tbl_pair">
+      <EntityTypeMapping TypeName="YugensysDBModel.tbl_pair">
+        <MappingFragment StoreEntitySet="tbl_pair">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="color" ColumnName="color" />
+          <ScalarProperty Name="fruit" ColumnName="fruit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_suggested">
+      <EntityTypeMapping TypeName="YugensysDBModel.tbl_suggested">
+        <MappingFragment StoreEntitySet="tbl_suggested">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fruit" ColumnName="fruit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="suggested_sp" FunctionName="YugensysDBModel.Store.suggested_sp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="YugensysDBModel.suggested_sp_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fruit" ColumnName="fruit" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
